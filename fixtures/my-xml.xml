@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="contenttypes.contenttype" pk="1">
+        <field name="app_label" type="CharField">admin</field>
+        <field name="model" type="CharField">logentry</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="2">
+        <field name="app_label" type="CharField">auth</field>
+        <field name="model" type="CharField">permission</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="3">
+        <field name="app_label" type="CharField">auth</field>
+        <field name="model" type="CharField">group</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="4">
+        <field name="app_label" type="CharField">auth</field>
+        <field name="model" type="CharField">user</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="5">
+        <field name="app_label" type="CharField">contenttypes</field>
+        <field name="model" type="CharField">contenttype</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="6">
+        <field name="app_label" type="CharField">sessions</field>
+        <field name="model" type="CharField">session</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="7">
+        <field name="app_label" type="CharField">stock</field>
+        <field name="model" type="CharField">product</field>
+    </object>
+    <object model="contenttypes.contenttype" pk="8">
+        <field name="app_label" type="CharField">stock</field>
+        <field name="model" type="CharField">stockentry</field>
+    </object>
+    <object model="stock.product" pk="1">
+        <field name="created_at" type="DateTimeField">2017-10-10T10:10:00+00:00</field>
+        <field name="updated_at" type="DateTimeField">
+            <None></None>
+        </field>
+        <field name="name" type="CharField">Produto YY</field>
+        <field name="stock" type="IntegerField">10</field>
+        <field name="stock_max" type="IntegerField">200</field>
+        <field name="price_sale" type="DecimalField">50.50</field>
+        <field name="price_purchase" type="DecimalField">25.25</field>
+    </object>
+    <object model="stock.product" pk="2">
+        <field name="created_at" type="DateTimeField">2017-10-10T10:10:00+00:00</field>
+        <field name="updated_at" type="DateTimeField">
+            <None></None>
+        </field>
+        <field name="name" type="CharField">Produto A</field>
+        <field name="stock" type="IntegerField">11</field>
+        <field name="stock_max" type="IntegerField">300</field>
+        <field name="price_sale" type="DecimalField">60.50</field>
+        <field name="price_purchase" type="DecimalField">35.25</field>
+    </object>
+    <object model="stock.product" pk="3">
+        <field name="created_at" type="DateTimeField">2017-10-10T10:10:00+00:00</field>
+        <field name="updated_at" type="DateTimeField">
+            <None></None>
+        </field>
+        <field name="name" type="CharField">Produto B</field>
+        <field name="stock" type="IntegerField">11</field>
+        <field name="stock_max" type="IntegerField">300</field>
+        <field name="price_sale" type="DecimalField">60.50</field>
+        <field name="price_purchase" type="DecimalField">35.25</field>
+    </object>
+    <object model="stock.stockentry" pk="1">
+        <field name="created_at" type="DateTimeField">2017-10-10T10:10:00+00:00</field>
+        <field name="updated_at" type="DateTimeField">
+            <None></None>
+        </field>
+        <field name="amount" type="IntegerField">1</field>
+        <field name="product" rel="ManyToOneRel" to="stock.product">1</field>
+    </object>
+    <object model="stock.stockentry" pk="2">
+        <field name="created_at" type="DateTimeField">2017-10-11T10:10:00+00:00</field>
+        <field name="updated_at" type="DateTimeField">
+            <None></None>
+        </field>
+        <field name="amount" type="IntegerField">1</field>
+        <field name="product" rel="ManyToOneRel" to="stock.product">2</field>
+    </object>
+    <object model="auth.permission" pk="1">
+        <field name="name" type="CharField">Can add log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+        <field name="codename" type="CharField">add_logentry</field>
+    </object>
+    <object model="auth.permission" pk="2">
+        <field name="name" type="CharField">Can change log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+        <field name="codename" type="CharField">change_logentry</field>
+    </object>
+    <object model="auth.permission" pk="3">
+        <field name="name" type="CharField">Can delete log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+        <field name="codename" type="CharField">delete_logentry</field>
+    </object>
+    <object model="auth.permission" pk="4">
+        <field name="name" type="CharField">Can add permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+        <field name="codename" type="CharField">add_permission</field>
+    </object>
+    <object model="auth.permission" pk="5">
+        <field name="name" type="CharField">Can change permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+        <field name="codename" type="CharField">change_permission</field>
+    </object>
+    <object model="auth.permission" pk="6">
+        <field name="name" type="CharField">Can delete permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+        <field name="codename" type="CharField">delete_permission</field>
+    </object>
+    <object model="auth.permission" pk="7">
+        <field name="name" type="CharField">Can add group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+        <field name="codename" type="CharField">add_group</field>
+    </object>
+    <object model="auth.permission" pk="8">
+        <field name="name" type="CharField">Can change group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+        <field name="codename" type="CharField">change_group</field>
+    </object>
+    <object model="auth.permission" pk="9">
+        <field name="name" type="CharField">Can delete group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+        <field name="codename" type="CharField">delete_group</field>
+    </object>
+    <object model="auth.permission" pk="10">
+        <field name="name" type="CharField">Can add user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+        <field name="codename" type="CharField">add_user</field>
+    </object>
+    <object model="auth.permission" pk="11">
+        <field name="name" type="CharField">Can change user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+        <field name="codename" type="CharField">change_user</field>
+    </object>
+    <object model="auth.permission" pk="12">
+        <field name="name" type="CharField">Can delete user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+        <field name="codename" type="CharField">delete_user</field>
+    </object>
+    <object model="auth.permission" pk="13">
+        <field name="name" type="CharField">Can add content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+        <field name="codename" type="CharField">add_contenttype</field>
+    </object>
+    <object model="auth.permission" pk="14">
+        <field name="name" type="CharField">Can change content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+        <field name="codename" type="CharField">change_contenttype</field>
+    </object>
+    <object model="auth.permission" pk="15">
+        <field name="name" type="CharField">Can delete content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+        <field name="codename" type="CharField">delete_contenttype</field>
+    </object>
+    <object model="auth.permission" pk="16">
+        <field name="name" type="CharField">Can add session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+        <field name="codename" type="CharField">add_session</field>
+    </object>
+    <object model="auth.permission" pk="17">
+        <field name="name" type="CharField">Can change session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+        <field name="codename" type="CharField">change_session</field>
+    </object>
+    <object model="auth.permission" pk="18">
+        <field name="name" type="CharField">Can delete session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+        <field name="codename" type="CharField">delete_session</field>
+    </object>
+    <object model="auth.permission" pk="19">
+        <field name="name" type="CharField">Can add product</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+        <field name="codename" type="CharField">add_product</field>
+    </object>
+    <object model="auth.permission" pk="20">
+        <field name="name" type="CharField">Can change product</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+        <field name="codename" type="CharField">change_product</field>
+    </object>
+    <object model="auth.permission" pk="21">
+        <field name="name" type="CharField">Can delete product</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+        <field name="codename" type="CharField">delete_product</field>
+    </object>
+    <object model="auth.permission" pk="22">
+        <field name="name" type="CharField">Can add stock entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+        <field name="codename" type="CharField">add_stockentry</field>
+    </object>
+    <object model="auth.permission" pk="23">
+        <field name="name" type="CharField">Can change stock entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+        <field name="codename" type="CharField">change_stockentry</field>
+    </object>
+    <object model="auth.permission" pk="24">
+        <field name="name" type="CharField">Can delete stock entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+        <field name="codename" type="CharField">delete_stockentry</field>
+    </object>
+    <object model="auth.user" pk="1">
+        <field name="password" type="CharField">
+            pbkdf2_sha256$36000$EzVH3TljSIUt$4WGW2pYJYfL0s5RlcdLe61TePksdg1Bi0avxmUhe93c=
+        </field>
+        <field name="last_login" type="DateTimeField">
+            <None></None>
+        </field>
+        <field name="is_superuser" type="BooleanField">True</field>
+        <field name="username" type="CharField">admin</field>
+        <field name="first_name" type="CharField">Admin</field>
+        <field name="last_name" type="CharField">son12345</field>
+        <field name="email" type="CharField">admin@user.com</field>
+        <field name="is_staff" type="BooleanField">True</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="date_joined" type="DateTimeField">2017-10-12T12:15:23.256000+00:00</field>
+        <field name="groups" rel="ManyToManyRel" to="auth.group"></field>
+        <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
+    </object>
+</django-objects>

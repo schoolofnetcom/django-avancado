@@ -1,0 +1,8 @@
+<h1>Nova entrada de produtos</h1>
+<form action="{% url 'entries_create' %}" method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Enviar</button>
+</form>

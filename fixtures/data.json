@@ -1,0 +1,74 @@
+[
+  {
+    "model": "stock.product",
+    "pk": 1,
+    "fields": {
+      "name": "Produto YY",
+      "stock": 10,
+      "stock_max": 200,
+      "price_sale": 50.50,
+      "price_purchase": 25.25,
+      "created_at": "2017-10-10T10:10+00:00"
+    }
+  },
+  {
+    "model": "stock.product",
+    "pk": 2,
+    "fields": {
+      "name": "Produto A",
+      "stock": 11,
+      "stock_max": 300,
+      "price_sale": 60.50,
+      "price_purchase": 35.25,
+      "created_at": "2017-10-10T10:10+00:00"
+    }
+  },
+  {
+    "model": "stock.product",
+    "pk": 3,
+    "fields": {
+      "name": "Produto B",
+      "stock": 11,
+      "stock_max": 300,
+      "price_sale": 60.50,
+      "price_purchase": 35.25,
+      "created_at": "2017-10-10T10:10+00:00"
+    }
+  },
+  {
+    "model": "stock.stockentry",
+    "pk": 1,
+    "fields": {
+      "amount": 1,
+      "product": 1,
+      "created_at": "2017-10-10T10:10+00:00"
+    }
+  },
+  {
+    "model": "stock.stockentry",
+    "pk": 2,
+    "fields": {
+      "amount": 1,
+      "product": 2,
+      "created_at": "2017-10-11T10:10+00:00"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$36000$EzVH3TljSIUt$4WGW2pYJYfL0s5RlcdLe61TePksdg1Bi0avxmUhe93c=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "son12345",
+      "email": "admin@user.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2017-10-12T12:15:23.256Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

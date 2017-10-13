@@ -1,0 +1,24 @@
+<h1>Entradas de estoque</h1>
+<a href="{% url 'entries_new' %}">Nova entrada</a>
+<br/>
+<br/>
+<table border="1">
+    <thead>
+    <tr>
+        <th style="width: 10px;">#</th>
+        <th>Quant.</th>
+        <th>Produto</th>
+        <th>Estoque</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry in entries %}
+    <tr>
+        <td>{{ entry.pk  }}</td>
+        <td>{{ entry.amount }}</td>
+        <td>{{ entry.product.name }}</td>
+        <td>{{ entry.product.stock }}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
